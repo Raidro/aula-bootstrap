@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- link do bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <title>Bootstrap</title>
+</head>
+
+<body>
+
+    <!-- o bootstrap trabalha com classes -->
+
+
+    <div class="container">
+        <!-- classe row do botstrap -->
+        <div class="row">
+
+
+            <div class="col-6">
+                <!-- Inicio do formulario-->
+                <form action="" method="GET">
+                    <fieldset>
+                        <legend>Cadastro de Contato</legend>
+                        <div class="form-group">
+                            <!--Grupo de componente nome-->
+                            <label for="nome">Nome: </label>
+                            <input type="text" class="form-control" name="nome" id="nome">
+                        </div>
+                        <!--final do Grupo de componente nome-->
+
+                        <div class="form-group">
+                            <!--Grupo de componente telefone-->
+                            <label for="fone">Telefone: </label>
+                            <input type="tel" class="form-control" name="fone" id="fone">
+                        </div>
+                        <!--final do Grupo de componente telefone-->
+
+
+                        <!-- <div class="form-group">
+                            <label for="">Sexo: </label>
+
+                        </div>
+                         -->
+
+                        <div class="form-group">
+                            <!--criado o form group pra checkbox-->
+
+                            <div class="form-check form-check-inline">
+                                <label for="masc">
+                                    <input type="radio" name="sexo" id="masc"> Masculino
+                                </label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <label for="feme">
+                                    <input type="radio" name="sexo" id="feme"> Feminino
+                                </label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <label for="outros">
+                                    <input type="radio" name="sexo" id="outros"> Outros
+                                </label>
+                            </div>
+
+
+                        </div>
+                        <!--fim do form group pra checkbox-->
+
+                    </fieldset>
+                </form>
+            </div>
+            <!-- Fim do formulario-->
+
+            <div class="col-6">
+                <!-- Inicio da tabela-->
+
+            </div>
+            <!-- Fim da tabela-->
+
+
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>
