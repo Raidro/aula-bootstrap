@@ -6,12 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- link do bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-        crossorigin="anonymous">
-
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
     <!-- Link do FontAwesome -->
-    <link rel="stylesheet" href="css/all.css">
-
+    <link rel="stylesheet" href="css/font-awesome.css">
 
     <title>Bootstrap</title>
 </head>
@@ -119,15 +116,15 @@
                                 <th>id</th>
                                 <!-- The <th> tag defines a header cell in an HTML table. -->
                                 <th>Nome</th>
-                                <th>Telefone</th>
+                                <th style="width: 150px;">Telefone</th>
                                 <th>Sexo</th>
                                 <th>Cidade</th>
-                                <th>Editar</th>
-                                <th>Exluir</th>
+                                <th style="width: 100px;">Editar</th>
+                                <!-- <th>Exluir</th> -->
                             </tr>
                         </thead>
 
-                        <body>
+                        <tbody>
                             <tr>
                                 <td>1</td>
                                 <!-- The <td> tag defines a standard cell in an HTML table. -->
@@ -139,9 +136,6 @@
                                     <button type="button" class="btn btn-info btn-sm">
                                         <i class="fas fa-user-edit"></i>
                                     </button>
-
-                                </td>
-                                <td>
                                     <button type="button" class="btn btn-danger btn-sm">
                                         <i class="fas fa-trash-alt"></i>
                                     </button>
@@ -154,10 +148,12 @@
                                 <td>Feminino</td>
                                 <td>Mossoro</td>
                                 <td>
-                                    <button type="button" class="btn btn-info btn-sm">Editar</button>
-                                </td>
-                                <td>
-                                    <button type="button" class="btn btn-danger btn-sm">Excluir</button>
+                                    <button type="button" class="btn btn-info btn-sm">
+                                        <i class="fas fa-user-edit"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-danger btn-sm">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
                                 </td>
                             </tr>
                             <tr>
@@ -167,10 +163,12 @@
                                 <td>Outros</td>
                                 <td>Parnamirim</td>
                                 <td>
-                                    <button type="button" class="btn btn-info btn-sm">Editar</button>
-                                </td>
-                                <td>
-                                    <button type="button" class="btn btn-danger btn-sm">Excluir</button>
+                                    <button type="button" class="btn btn-info btn-sm">
+                                        <i class="fas fa-user-edit"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-danger btn-sm">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
                                 </td>
                             </tr>
                             <tr>
@@ -180,13 +178,15 @@
                                 <td>Feminina</td>
                                 <td>São Gonçalo</td>
                                 <td>
-                                    <button type="button" class="btn btn-info btn-sm">Editar</button>
-                                </td>
-                                <td>
-                                    <button type="button" class="btn btn-danger btn-sm">Excluir</button>
+                                    <button type="button" class="btn btn-info btn-sm">
+                                        <i class="fas fa-user-edit"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-danger btn-sm">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
                                 </td>
                             </tr>
-                        </body>
+                        </tbody>
                     </table>
                 </fieldset>
             </div>
