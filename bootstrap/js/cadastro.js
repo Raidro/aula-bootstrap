@@ -14,4 +14,16 @@ function cadastrar() {
 
     console.log(formulario);
 
+    let sexo = '';
+    if (document.getElementById('masc').checked) {
+        sexo = 'Masculino';
+    } else if (document.getElementById('feme').checked) {
+        sexo = 'Feminino';
+
+    } else {
+        sexo = 'outros';
+    }
+
+
+
 }
