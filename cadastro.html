@@ -73,7 +73,7 @@
                         <div class="form-group">
                             <!--inicio do form group pra cidade-->
                             <label for="cidade">Cidade: </label>
-                            <select name="cidade" id="" class="form-control">
+                            <select name="cidade" id="cidade" class="form-control">
                                 <option selected>Selecione...</option>
                                 <option>Natal</option>
                                 <option>Mossoró</option>
@@ -90,11 +90,17 @@
 
                             <div class="row">
                                 <div class="col-6">
-                                    <button type="submit" class="btn btn-success btn-block">Salvar</button>
+
+                                    <button type="button" onclick="cadastrar();"
+                                        class="btn btn-success btn-block">Salvar</button>
+                                    <!-- <button type="submit" class="btn btn-success btn-block">Salvar</button> -->
+
                                 </div>
                                 <div class="col-6">
+
                                     <button type="reset" class="btn btn-danger btn-block">Limpar</button>
                                     <!-- btn-block faz o botão ficar do tamanho baseado no pai, nesse caso, a div-col-6 -->
+
                                 </div>
                             </div>
 
