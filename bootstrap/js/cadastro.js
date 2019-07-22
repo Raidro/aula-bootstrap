@@ -12,7 +12,7 @@ function cadastrar() {
     let cidade = document.getElementById('cidade').value;
     formulario.push(cidade);
 
-    console.log(formulario);
+
 
     let sexo = '';
     if (document.getElementById('masc').checked) {
@@ -24,6 +24,22 @@ function cadastrar() {
         sexo = 'outros';
     }
 
+    formulario.push(sexo);
 
+    console.log(formulario);
+
+    limparFormulario();
+
+
+
+}
+
+function limparFormulario() {
+
+    document.getElementById('nome').value = '';
+    document.getElementById('fone').value = '';
+    document.getElementById('cidade').value = 'selecione';
+    document.getElementById('masc').checked = true;
+    document.getElementById('nome').focus();
 
 }
