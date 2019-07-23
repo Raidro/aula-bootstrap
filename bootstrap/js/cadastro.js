@@ -1,8 +1,6 @@
 
 function cadastrar() {
 
-    let formulario = [];
-
     // let nome = document.getElementById('nome').value;
     let nome = valida_nome(document.getElementById('nome').value);
 
@@ -13,16 +11,10 @@ function cadastrar() {
 
     }
 
-    formulario.push(nome);
-
     let fone = document.getElementById('fone').value;
     // let fone = valida_fone(document.getElementById('fone').value);
-    formulario.push(fone);
 
     let cidade = document.getElementById('cidade').value;
-    formulario.push(cidade);
-
-
 
     let sexo = '';
     if (document.getElementById('masc').checked) {
@@ -33,10 +25,6 @@ function cadastrar() {
     } else {
         sexo = 'outros';
     }
-
-    formulario.push(sexo);
-
-    console.log(formulario);
 
     insereNaTabela(nome, fone, sexo, cidade);
 
