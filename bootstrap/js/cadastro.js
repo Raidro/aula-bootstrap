@@ -7,7 +7,8 @@ function cadastrar() {
     let nome = valida_nome(document.getElementById('nome').value);
     formulario.push(nome);
 
-    let fone = document.getElementById('fone').value;
+    // let fone = document.getElementById('fone').value;
+    let fone = valida_fone(document.getElementById('fone').value);
     formulario.push(fone);
 
     let cidade = document.getElementById('cidade').value;
@@ -47,16 +48,24 @@ function ehNumero(numero) {
     return !isNaN(numero);
 }
 
-function valida_nome(texto) {
+function valida_nome(nome) {
 
-    return ehNumero(texto) ? nome : false;
+    let texto = nome.trim().toUpperCase();
 
-    // if (ehNumero(texto)) {
-    //     return nome;
+    for (let i = 0; i < texto.length; i++) {
 
-    // } else {
-    //     return false;
-    // }
+        if (ehNumero(texto[i])) {
+
+            return false;
+        }
+        return texto;
+    }
+
+}
+
+function valida_fone(texto) {
+
+
 }
 
 
