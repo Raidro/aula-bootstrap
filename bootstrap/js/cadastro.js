@@ -38,6 +38,8 @@ function cadastrar() {
 
     console.log(formulario);
 
+    insereNaTabela(nome, fone, sexo, cidade);
+
     limparFormulario();
 
 }
@@ -76,5 +78,30 @@ function valida_nome(nome) {
 
 
 // }
+
+function insereNaTabela(nome, fone, sexo, cidade) {
+
+    let tabela = document.getElementById('lista-contatos');
+
+    let ultimaLinha = tabela.rows.length;
+
+    let linha = tabela.insertRow(ultimaLinha);
+
+    let campoId = linha.insertCell(0);
+    let campoNome = linha.insertCell(1);
+    let campoFone = linha.insertCell(2);
+    let campoSexo = linha.insertCell(3);
+    let campoCidade = linha.insertCell(4);
+    let acoes;
+
+    campoId.innerHTML = ultimaLinha;
+    campoNome.innerHTML = nome;
+    campoFone.innerHTML = fone;
+    campoSexo.innerHTML = sexo;
+    campoCidade.innerHTML = cidade;
+
+
+
+}
 
 
