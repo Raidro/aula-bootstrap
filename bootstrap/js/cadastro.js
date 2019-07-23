@@ -5,10 +5,18 @@ function cadastrar() {
 
     // let nome = document.getElementById('nome').value;
     let nome = valida_nome(document.getElementById('nome').value);
+
+    if (nome == false) {
+        alert('Insira um nome valido!');
+        document.getElementById('nome').focus();
+        return;  // o break de uma função é o return ** posso colocar o foco no nome antes do return **
+
+    }
+
     formulario.push(nome);
 
-    // let fone = document.getElementById('fone').value;
-    let fone = valida_fone(document.getElementById('fone').value);
+    let fone = document.getElementById('fone').value;
+    // let fone = valida_fone(document.getElementById('fone').value);
     formulario.push(fone);
 
     let cidade = document.getElementById('cidade').value;
@@ -36,11 +44,11 @@ function cadastrar() {
 
 function limparFormulario() {
 
-    document.getElementById('nome').value = '';
-    document.getElementById('fone').value = '';
-    document.getElementById('cidade').value = 'selecione';
-    document.getElementById('masc').checked = true;
-    document.getElementById('nome').focus();
+    document.getElementById('nome').value = ''; // apaga o que tem em nome deixando ele vazio
+    document.getElementById('fone').value = '';// apaga o que tem em fone deixando ele vazio
+    document.getElementById('cidade').value = 'selecione';// deixa selecione como selecionado
+    document.getElementById('masc').checked = true; // deixa masc como o primeiro
+    document.getElementById('nome').focus();// deixa o focu no nome
 
 }
 
@@ -58,15 +66,15 @@ function valida_nome(nome) {
 
             return false;
         }
-        return texto;
+
     }
-
+    return texto;
 }
 
-function valida_fone(texto) {
+// function valida_fone(texto) {
 
 
 
-}
+// }
 
 
