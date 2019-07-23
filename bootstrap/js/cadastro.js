@@ -66,6 +66,7 @@ function valida_nome(nome) {
 function valida_fone(texto) {
 
 
+
 }
 
 
