@@ -91,4 +91,16 @@ function insereNaTabela(nome, fone, sexo, cidade) {
 
 }
 
+function insereBotoesDeAcoes() {
 
+    let botaoEditar = ' <button type="button" class="btn btn-info btn-sm">';
+    botaoEditar += '< i class="fas fa-user-edit" ></i >';
+    botaoEditar += '</button >';
+
+    let botaoExcluir = '<button type="button" class="btn btn-danger btn-sm">';
+    botaoExcluir += '<i class="fas fa-trash-alt"></i>';
+    botaoExcluir += '</button>';
+
+
+
+}
