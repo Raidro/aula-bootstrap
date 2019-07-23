@@ -17,6 +17,7 @@ function cadastrar() {
     let cidade = document.getElementById('cidade').value;
 
     let sexo = '';
+
     if (document.getElementById('masc').checked) {
         sexo = 'Masculino';
     } else if (document.getElementById('feme').checked) {
@@ -26,9 +27,9 @@ function cadastrar() {
         sexo = 'outros';
     }
 
-    insereNaTabela(nome, fone, sexo, cidade);
+    insereNaTabela(nome, fone, sexo, cidade); // insere na tabela
 
-    limparFormulario();
+    limparFormulario(); // limpa o formulario
 
 }
 
@@ -87,8 +88,6 @@ function insereNaTabela(nome, fone, sexo, cidade) {
     campoFone.innerHTML = fone;
     campoSexo.innerHTML = sexo;
     campoCidade.innerHTML = cidade;
-
-
 
 }
 
