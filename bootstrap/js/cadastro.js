@@ -3,7 +3,8 @@ function cadastrar() {
 
     let formulario = [];
 
-    let nome = document.getElementById('nome').value;
+    // let nome = document.getElementById('nome').value;
+    let nome = valida_nome(document.getElementById('nome').value);
     formulario.push(nome);
 
     let fone = document.getElementById('fone').value;
@@ -30,8 +31,6 @@ function cadastrar() {
 
     limparFormulario();
 
-
-
 }
 
 function limparFormulario() {
@@ -43,3 +42,19 @@ function limparFormulario() {
     document.getElementById('nome').focus();
 
 }
+
+function ehNumero(numero) {
+    return !isNaN(numero);
+}
+
+function valida_nome(texto) {
+
+    if (ehNumero(texto)) {
+        return nome;
+
+    } else {
+        return false;
+    }
+
+}
+
