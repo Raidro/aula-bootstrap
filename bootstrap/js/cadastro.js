@@ -49,12 +49,14 @@ function ehNumero(numero) {
 
 function valida_nome(texto) {
 
-    if (ehNumero(texto)) {
-        return nome;
+    return ehNumero(texto) ? nome : false;
 
-    } else {
-        return false;
-    }
+    // if (ehNumero(texto)) {
+    //     return nome;
 
+    // } else {
+    //     return false;
+    // }
 }
+
 
