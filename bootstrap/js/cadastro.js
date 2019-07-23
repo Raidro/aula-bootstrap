@@ -101,6 +101,7 @@ function insereBotoesDeAcoes() {
     botaoExcluir += '<i class="fas fa-trash-alt"></i>';
     botaoExcluir += '</button>';
 
-
-
 }
+   
+
+
