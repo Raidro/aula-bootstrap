@@ -70,6 +70,7 @@ function valida_nome(nome) {
 
 function insereNaTabela(nome, fone, sexo, cidade) {
 
+
     let tabela = document
         .getElementById('lista-contatos')
         .getElementsByTagName('tbody')[0];
@@ -90,7 +91,7 @@ function insereNaTabela(nome, fone, sexo, cidade) {
     campoFone.innerHTML = fone;
     campoSexo.innerHTML = sexo;
     campoCidade.innerHTML = cidade;
-    acoes.innerHTML = insereBotoesDeAcoes();
+    acoes.innerHTML = insereBotoesDeAcoes(ultimaLinha + 1);
 
 }
 
