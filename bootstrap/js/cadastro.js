@@ -94,9 +94,9 @@ function insereNaTabela(nome, fone, sexo, cidade) {
 
 }
 
-function insereBotoesDeAcoes() {
+function insereBotoesDeAcoes(id) {
 
-    let botaoEditar = '<button type="button" onclick="editaTabela(' + id + ');" class="btn btn-info btn-sm">';
+    let botaoEditar = '<button type="button" onclick="editaTabela(' + id + ')" class="btn btn-info btn-sm">';
     botaoEditar += '<i class="fas fa-user-edit" ></i>';
     botaoEditar += '</button>';
 
@@ -112,31 +112,14 @@ function editaTabela(id) {
     let tabela = document
         .getElementById('lista-contatos')
         .getElementsByTagName('tbody')[0];
-
     let linhas = tabela.rows.length;
 
-    for (let i = 0; i < linhas.length; i++) {
-        if (tabela.rows[i].cells[1].innerHTML) {
-
+    for (let i = 0; i < linhas; i++) {
+        if (tabela.rows[i].cells[0].innerHTML == id) {
             let inputNome = document.getElementById('nome');//pegando todos os atributos do nome
             inputNome.value = tabela.rows[i].cells[1].innerHTML; //aqui, eu estou pegando do atributo inputNome, o valor dele ecolocando o que esta na celula 1 da tabela ;
             return;
-
-
         }
     }
-
-
-
-
-    return console.log(nome);
-
-
-
-
-
-
-
-
 }
 
