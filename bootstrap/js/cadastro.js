@@ -70,7 +70,9 @@ function valida_nome(nome) {
 
 function insereNaTabela(nome, fone, sexo, cidade) {
 
-    let tabela = document.getElementById('lista-contatos');
+    let tabela = document
+        .getElementById('lista-contatos')
+        .getElementsByTagName('tbody')[0];
 
     let ultimaLinha = tabela.rows.length;
 
@@ -81,27 +83,29 @@ function insereNaTabela(nome, fone, sexo, cidade) {
     let campoFone = linha.insertCell(2);
     let campoSexo = linha.insertCell(3);
     let campoCidade = linha.insertCell(4);
-    let acoes;
+    let acoes = linha.insertCell(5);
 
-    campoId.innerHTML = ultimaLinha;
+    campoId.innerHTML = ultimaLinha + 1;
     campoNome.innerHTML = nome;
     campoFone.innerHTML = fone;
     campoSexo.innerHTML = sexo;
     campoCidade.innerHTML = cidade;
+    acoes.innerHTML = insereBotoesDeAcoes();
 
 }
 
 function insereBotoesDeAcoes() {
 
-    let botaoEditar = ' <button type="button" class="btn btn-info btn-sm">';
-    botaoEditar += '< i class="fas fa-user-edit" ></i >';
-    botaoEditar += '</button >';
+    let botaoEditar = '<button type="button" class="btn btn-info btn-sm">';
+    botaoEditar += '<i class="fas fa-user-edit" ></i>';
+    botaoEditar += '</button>';
 
     let botaoExcluir = '<button type="button" class="btn btn-danger btn-sm">';
     botaoExcluir += '<i class="fas fa-trash-alt"></i>';
     botaoExcluir += '</button>';
 
+    return botaoEditar + botaoExcluir;
 }
-   
+
 
 
