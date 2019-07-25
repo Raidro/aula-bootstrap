@@ -115,16 +115,21 @@ function editaTabela(id) {
         .getElementsByTagName('tbody')[0];
     let linhas = tabela.rows.length;
 
+    // ======== inicio do for ========//
+    
     for (let i = 0; i < linhas; i++) {
         if (tabela.rows[i].cells[0].innerHTML == id) {
-
+            // ========  inicio do input Nome =======//
             let inputNome = document.getElementById('nome');//pegando todos os atributos do nome
             inputNome.value = tabela.rows[i].cells[1].innerHTML;//aqui, eu estou pegando do atributo inputNome, o valor dele ecolocando o que esta na celula 1 da tabela ;
+            // ======== fim do input cidade ========//
 
+            // ========  inicio do input Fone =======//
             let inputFone = document.getElementById('fone')//pegando todos os atributos do fone
             inputFone.value = tabela.rows[i].cells[2].innerHTML;// o innerHTML pega a informação entre as tags
+            // ======== fim do input cidade ========//
 
-            /* Inicio do if do inputSexo */
+            /* ===== Inicio do if do inputSexo ==== */
             let inputSexo = tabela.rows[i].cells[3].innerHTML;
             //console.log(inputSexo);
 
@@ -142,11 +147,13 @@ function editaTabela(id) {
             }
             /* =============================== */
 
+            // ========  inicio do input cidade =======//
             let inputCidade = document.getElementById('cidade')
             inputCidade.value = tabela.rows[i].cells[4].innerHTML;//innerHTML retorna o texto entre as tags:ex: <td>Esse é o texto que será pego</td>
-
+            // ======== fim do input cidade ========//
             return;
         }
     }
+    // ======== fim do for ========//
 }
 
