@@ -125,8 +125,8 @@ function editaTabela(id) {
             inputFone.value = tabela.rows[i].cells[2].innerHTML;
 
             /* Inicio do if do inputSexo */
+            let inputSexo = tabela.rows[i].cells[3].innerHTML;
             console.log(inputSexo);
-            let inputSexo = tabela.rows[i].cells[3];
 
             if (inputSexo == 'Masculino') {
 
@@ -143,7 +143,7 @@ function editaTabela(id) {
             /* =============================== */
 
             let inputCidade = document.getElementById('cidade')
-            inputCidade.value = tabela.rows[i].cells[4].innerHTML;
+            inputCidade.value = tabela.rows[i].cells[4].innerHTML;//innerHTML retorna o texto entre as tags:ex: <td>Esse é o texto que será pego</td>
 
             return;
         }
