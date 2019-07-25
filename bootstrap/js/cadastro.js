@@ -119,6 +119,12 @@ function editaTabela(id) { // pega o pelo id
 
     for (let i = 0; i < linhas; i++) {
         if (tabela.rows[i].cells[0].innerHTML == id) {
+
+            // ========  inicio do input oculto =======//
+            let inputId = document.getElementById('id'); //está pegando a informação do id
+            inputId = tabela.rows[i].cells[0].innerHTML;// está colocando o valor do id no id oculto
+            // ======== fim do input oculto ========//
+
             // ========  inicio do input Nome =======//
             let inputNome = document.getElementById('nome');//pegando todos os atributos do nome
             inputNome.value = tabela.rows[i].cells[1].innerHTML;//aqui, eu estou pegando do atributo inputNome, o valor dele ecolocando o que esta na celula 1 da tabela ;
