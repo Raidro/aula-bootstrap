@@ -119,6 +119,21 @@ function editaTabela(id) {
         if (tabela.rows[i].cells[0].innerHTML == id) {
             let inputNome = document.getElementById('nome');//pegando todos os atributos do nome
             inputNome.value = tabela.rows[i].cells[1].innerHTML; //aqui, eu estou pegando do atributo inputNome, o valor dele ecolocando o que esta na celula 1 da tabela ;
+            let inputFone = document.getElementById('fone')
+            inputFone.value = tabela.rows[i].cells[2].innerHTML;
+
+            let inputSexo = document.getElementById('sexo');
+            
+            if (tabela.rows[i].cells[3] == 'masc') {
+                inputSexo.value = document.getElementById('masc').checked;
+            } else if (tabela.rows[i].cells[3] == 'feme') {
+                inputSexo.value = document.getElementById('feme').checked;
+            } else {
+                inputSexo.value = document.getElementById('outros').checked;
+            }
+
+            let inputCidade = document.getElementById('cidade')
+            inputCidade.value = tabela.rows[i].cells[4].innerHTML;
             return;
         }
     }
