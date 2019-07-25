@@ -101,22 +101,22 @@ function insereBotoesDeAcoes(id) {
     botaoEditar += '<i class="fas fa-user-edit" ></i>';
     botaoEditar += '</button>';
 
-    let botaoExcluir = '<button type="button" class="btn btn-danger btn-sm">';
+    let botaoExcluir = '<button type="button" class="btn btn-danger btn-sm">';//interpolação de strings
     botaoExcluir += '<i class="fas fa-trash-alt"></i>';
     botaoExcluir += '</button>';
 
-    return botaoEditar + botaoExcluir;
+    return botaoEditar + botaoExcluir; // soma os botões de editar e excluir para que aparecam juntos 
 }
 
-function editaTabela(id) {
+function editaTabela(id) { // pega o pelo id
 
     let tabela = document
-        .getElementById('lista-contatos')
-        .getElementsByTagName('tbody')[0];
-    let linhas = tabela.rows.length;
+        .getElementById('lista-contatos') //pega o id list-contatos
+        .getElementsByTagName('tbody')[0];//e as informações do tbody[0]
+    let linhas = tabela.rows.length; // estou pegando o tamanho da linha escolhida 
 
     // ======== inicio do for ========//
-    
+
     for (let i = 0; i < linhas; i++) {
         if (tabela.rows[i].cells[0].innerHTML == id) {
             // ========  inicio do input Nome =======//
@@ -156,4 +156,6 @@ function editaTabela(id) {
     }
     // ======== fim do for ========//
 }
+
+
 
