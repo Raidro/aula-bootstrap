@@ -124,10 +124,10 @@ function editaTabela(id) {
             let inputFone = document.getElementById('fone')
             inputFone.value = tabela.rows[i].cells[2].innerHTML;
 
+            /* Inicio do if do inputSexo */
+            console.log(inputSexo);
             let inputSexo = tabela.rows[i].cells[3];
 
-            console.log(inputSexo);
-            /* Inicio do if do inputSexo */
             if (inputSexo == 'Masculino') {
 
                 document.getElementById('masc').checked = true;
@@ -141,8 +141,8 @@ function editaTabela(id) {
                 document.getElementById('outros').checked = true;
             }
             /* =============================== */
-            let inputCidade = document.getElementById('cidade')
 
+            let inputCidade = document.getElementById('cidade')
             inputCidade.value = tabela.rows[i].cells[4].innerHTML;
 
             return;
