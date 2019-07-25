@@ -121,24 +121,24 @@ function editaTabela(id) {
             let inputNome = document.getElementById('nome');//pegando todos os atributos do nome
             inputNome.value = tabela.rows[i].cells[1].innerHTML;//aqui, eu estou pegando do atributo inputNome, o valor dele ecolocando o que esta na celula 1 da tabela ;
 
-            let inputFone = document.getElementById('fone')
-            inputFone.value = tabela.rows[i].cells[2].innerHTML;
+            let inputFone = document.getElementById('fone')//pegando todos os atributos do fone
+            inputFone.value = tabela.rows[i].cells[2].innerHTML;// o innerHTML pega a informação entre as tags
 
             /* Inicio do if do inputSexo */
             let inputSexo = tabela.rows[i].cells[3].innerHTML;
-            console.log(inputSexo);
+            //console.log(inputSexo);
 
-            if (inputSexo == 'Masculino') {
+            if (inputSexo == 'Masculino') { //verifica se o texto entre as tags é maculino
 
-                document.getElementById('masc').checked = true;
+                document.getElementById('masc').checked = true;// se for masculino, ele coloca a tag masc.checked como verdadeiro(deixa marcado)
 
-            } else if (inputSexo == 'Feminino') {
+            } else if (inputSexo == 'Feminino') {//verifica se o texto entre as tags é feminino
 
-                document.getElementById('feme').checked = true;
+                document.getElementById('feme').checked = true;// se for feminino, ele coloca a tag feme.checked como verdadeiro(deixa marcado)
 
-            } else {
+            } else {//se não for nem masculino e nem feminino
 
-                document.getElementById('outros').checked = true;
+                document.getElementById('outros').checked = true;// ele coloca a tag outros.checked como verdadeiro(deixa marcado)
             }
             /* =============================== */
 
