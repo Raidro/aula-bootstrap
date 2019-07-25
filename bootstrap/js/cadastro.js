@@ -75,7 +75,7 @@ function insereNaTabela(nome, fone, sexo, cidade) {
         .getElementById('lista-contatos')
         .getElementsByTagName('tbody')[0];
 
-    let ultimaLinha = tabela.rows.length;
+    let ultimaLinha = tabela.rows.length; // se refere a ultima linha que eu cliquei
 
     let linha = tabela.insertRow(ultimaLinha);
 
