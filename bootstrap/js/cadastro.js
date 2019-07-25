@@ -1,6 +1,8 @@
 
 function cadastrar() {
 
+    let idOculto = document.getElementById('id').value;
+
     // let nome = document.getElementById('nome').value;
     let nome = valida_nome(document.getElementById('nome').value);
 
@@ -27,14 +29,16 @@ function cadastrar() {
         sexo = 'Outros';
     }
 
-    insereNaTabela(nome, fone, sexo, cidade); // insere na tabela
+    insereNaTabela(idOculto, nome, fone, sexo, cidade); // insere na tabela
 
     limparFormulario(); // limpa o formulario
+
 
 }
 
 function limparFormulario() {
 
+    document.getElementById('id').value = 0; // zero o id oculto(a flag do id)
     document.getElementById('nome').value = ''; // apaga o que tem em nome deixando ele vazio
     document.getElementById('fone').value = '';// apaga o que tem em fone deixando ele vazio
     document.getElementById('cidade').value = 'selecione';// deixa selecione como selecionado
@@ -62,13 +66,7 @@ function valida_nome(nome) {
     return texto;
 }
 
-// function valida_fone(texto) {
-
-
-
-// }
-
-function insereNaTabela(nome, fone, sexo, cidade) {
+function insereNaTabela(idOculto, nome, fone, sexo, cidade) {
 
 
     let tabela = document
@@ -77,21 +75,33 @@ function insereNaTabela(nome, fone, sexo, cidade) {
 
     let ultimaLinha = tabela.rows.length; // se refere a ultima linha que eu cliquei
 
-    let linha = tabela.insertRow(ultimaLinha);
+    if (idOculto == 0) {
 
-    let campoId = linha.insertCell(0);
-    let campoNome = linha.insertCell(1);
-    let campoFone = linha.insertCell(2);
-    let campoSexo = linha.insertCell(3);
-    let campoCidade = linha.insertCell(4);
-    let acoes = linha.insertCell(5);
+        let linha = tabela.insertRow(ultimaLinha);
 
-    campoId.innerHTML = ultimaLinha + 1;
-    campoNome.innerHTML = nome;
-    campoFone.innerHTML = fone;
-    campoSexo.innerHTML = sexo;
-    campoCidade.innerHTML = cidade;
-    acoes.innerHTML = insereBotoesDeAcoes(ultimaLinha + 1);
+        let campoId = linha.insertCell(0);
+        let campoNome = linha.insertCell(1);
+        let campoFone = linha.insertCell(2);
+        let campoSexo = linha.insertCell(3);
+        let campoCidade = linha.insertCell(4);
+        let acoes = linha.insertCell(5);
+
+        campoId.innerHTML = ultimaLinha + 1;
+        campoNome.innerHTML = nome;
+        campoFone.innerHTML = fone;
+        campoSexo.innerHTML = sexo;
+        campoCidade.innerHTML = cidade;
+        acoes.innerHTML = insereBotoesDeAcoes(ultimaLinha + 1);
+
+    } else {
+
+        let linha = idOculto - 1;// pega a linha -1
+        tabela.rows[linha].cells[1].innerHTML = nome; // re-incere na linha
+        tabela.rows[linha].cells[2].innerHTML = fone;
+        tabela.rows[linha].cells[3].innerHTML = sexo;
+        tabela.rows[linha].cells[4].innerHTML = cidade;
+
+    }
 
 }
 
@@ -122,7 +132,8 @@ function editaTabela(id) { // pega o pelo id
 
             // ========  inicio do input oculto =======//
             let inputId = document.getElementById('id'); //está pegando a informação do id
-            inputId = tabela.rows[i].cells[0].innerHTML;// está colocando o valor do id no id oculto
+            inputId.value = tabela.rows[i].cells[0].innerHTML;// está colocando o valor do id no id oculto
+
             // ======== fim do input oculto ========//
 
             // ========  inicio do input Nome =======//
