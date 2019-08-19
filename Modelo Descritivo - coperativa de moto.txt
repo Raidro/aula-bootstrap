@@ -1,0 +1,16 @@
+
+
+Cooperativa de moto
+
+Problema - 
+
+ - Não possui registro escrito de todas as entregas, as entregas precisam que o motoqueiro se dirija a algum lugar pra pegar essa encomnda e entregue no destino
+ - o cliente solicita a entrega e o motoboyse desloca aonde está a encomenda.
+ - é guardado no fichario, o motociclista, a data/hora ddo pedido, a moto, valor da entrega.
+ - toda moto está associado a um motoqueiro (tem uqe ser habilitado e ter moto)
+ - resgitro dos  dados do motoqueiro e da moto
+ - a cooperativa faz a manutenção da moto
+ - ela tem um historico de manutenção baseado na quilometragem (ex.: data/kilometragem da moto na manutenção).
+ - deve ter armazenado a data de habilitação de cada motoqueiro pq a cooperativa paga a renovação.
+ 
+ -
