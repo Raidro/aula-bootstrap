@@ -1,0 +1,61 @@
+
+
+Cooperativa de moto:
+
+Problema: 
+
+ - Não possui registro escrito de todas as entregas, as entregas precisam que o motoqueiro se dirija a algum lugar pra pegar essa encomnda e entregue no destino
+ - o cliente solicita a entrega e o motoboy se desloca aonde está a encomenda.
+ - é guardado no fichario, o motociclista, a data/hora ddo pedido, a moto, valor da entrega.
+ - toda moto está associado a um motoqueiro (tem uqe ser habilitado e ter moto)
+ - resgitro dos  dados do motoqueiro e da moto
+ - a cooperativa faz a manutenção da moto
+ - ela tem um historico de manutenção baseado na quilometragem (ex.: data/kilometragem da moto na manutenção).
+ - deve ter armazenado a data de habilitação de cada motoqueiro pq a cooperativa paga a renovação.
+ 
+ <============================================================================================================================================================================>
+
+Modelo Descritivo: Nome da empresa: Pediu... Chegou! (Cooperativa de moto):
+
+	  O dono da Cooperativade moto, nos procurou para que fosse feito um estudo sobre a implementação de um sistema que pudesse
+	  manter um registro das entregas, do motoqueiro, da moto e da manutenção da moto. Após algumas visitas e discussões chegamos a seguinte
+	  conclusão:	
+
+1 - Como a cooperativa precisa de uma base de dados dos seus motociclistas, julgamos ser necessario o cadastro dos seguintes pontos:
+
+	- nome;
+	- cpf;
+	- sexo;
+	- endereço;
+ 	- numero da CNH;
+ 	- validade da CNH;
+ 	- matricula na cooperativa;
+ 	- tipo sanguineo.
+
+2 - Como o motociclista vai fazer a entrega, julgamos que precisa de um registro dessa entrega, que serão salvos os seguintes dados:
+
+	- O motociclista que a fez;
+ 	- a data e hora do pedido;
+ 	- a moto usada;
+	- valor da entrega; 
+	- endereço de origem; 
+	- KM inicial, KM final; 
+	- nome e documento do entregador(remetente); 
+	- endereço de destino; 
+	- nome e documento do recebedor; 
+	- tipo de pacote; 
+	- peso.
+
+3 - Como o cliente usara pessoas que possuem moto propria, será necessario armazenar as seguintes informação do moto:
+
+	- o nome do dono da moto;
+ 	- a placa da moto;
+ 	- o chassi da moto;
+	- kilometragem da ultima revisão;
+ 	- ultima manutenção (data);
+ 	- serviço feito na moto;
+ 	- modelo, fabricante;
+ 	- cor predominante;
+ 	- ano de fabricação;
+ 	- data de vencimento IPVA;
+ 	- potencia do veiculo.

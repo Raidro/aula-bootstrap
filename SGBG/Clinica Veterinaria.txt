@@ -1,0 +1,15 @@
+
+
+Modelo Descritivo - Clinca Veterianaria (Domestica):
+
+
+dados dos animais : nomes, idade, peso, especie e raça, sexo; 
+
+1 responavel para fins financeiros e contato : nome, cpf, telefone, endereço; 
+
+procedimentos de atendimento : consulta pode ser: vacina, anestesia, cirurgia, imobilização, tratamento de dente - (preço) quem realiza é um medico veterinario
+
+registro do medico vet: crmv, nome;
+
+registro de entrada - atendente: matricula, nome, data de nascimento e data de admissão;
+ 
